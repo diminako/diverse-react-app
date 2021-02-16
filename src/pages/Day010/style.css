@@ -48,7 +48,7 @@
 }
 
 @keyframes trainSuplex {
-    60% {top: 0%; left:80%}
     70% {top: 0%; left:80%}
+    80% {top: 0%; left:80%}
     /* 80% {transform: scaleY(1); top:50%;} */
 }
