@@ -1,6 +1,9 @@
 const style = {
     footer: {
-        margin: "0 auto"
+        height: "7%",
+        fontWeight: "Bold",
+        fontSize: "3rem",
+        backgroundColor: "#383e56"
       }
 }
 

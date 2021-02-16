@@ -6,7 +6,7 @@ const style = {
         color: "white"
     },
     logo: {
-        height: "2rem"
+        height: "10vh"
     }
 }
 
