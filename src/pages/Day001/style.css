@@ -1,0 +1,7 @@
+.main-div {
+    height: 100%;
+    color: linear-gradient(to right bottom, black, grey);
+    background-image: url(./phantom-train-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
