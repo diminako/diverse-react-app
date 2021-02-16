@@ -4,4 +4,51 @@
     background-image: url(./phantom-train-background.png);
     background-repeat: no-repeat;
     background-size: cover;
+
+    position: relative;
+
+}
+
+.sabin {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    height: 5rem;
+    width: 3rem;
+    background-image: url(./sabin.png);
+    background-image: reverse;
+    transform: scaleX(-1);
+}
+
+.animate {
+    animation: suplex 4s;
+}
+
+@keyframes suplex {
+    20% {top: 40%; left: 50%}
+    40% {top: 50%; left: 70%}
+    60% {top: 0%; left:80%}
+    70% {top: 0%; left:80%}
+    80% {transform: scaleY(1); top:50%;}
+}
+
+.train {
+    position: absolute;
+    top: 27%;
+    right: 8%;
+
+    height: 13rem;
+    width: 13.5rem;
+    background-image: url(./train.png);
+    transform: scale(2);
+}
+
+.trainAnimate {
+    animation: trainSuplex 4s;
+}
+
+@keyframes trainSuplex {
+    60% {top: 0%; left:80%}
+    70% {top: 0%; left:80%}
+    /* 80% {transform: scaleY(1); top:50%;} */
 }

@@ -8,6 +8,8 @@ import './App.css';
 
 const style = {
   page: {
+    backgroundColor: "darkGrey",
+    padding: "0 18rem",
     fontSize: "62.5%",
     height: "100vh",
     display: "flex",
