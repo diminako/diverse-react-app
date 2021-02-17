@@ -18,17 +18,25 @@ const style = {
 }
 
 const App = () => {
-const [day, setDay] = useState(" ");
+const [day, setDay] = useState("Day000");
 
   const daySelection = (e) => {
     e.preventDefault();
+
     setDay(e.target[0].value);
     console.log(day)
   }
 
+  const returnHome = (e) => {
+    e.preventDefault();
+    setDay(e.target.firstChild.attributes[1].value)
+  }
+
   return (
     <div className="App" style={style.page}>
-      <Header />
+      <Header 
+      returnHome={returnHome}
+      />
       <Selection 
       daySelection={daySelection}
       />

@@ -60,9 +60,8 @@ const Day001 = () => {
             <div className="container" style={style.container}>
 
                 <form action="" style={style.container} onClick={(e) => clickBox(e)}>
-                    {arr.map( (e) => <div className={e} style={style.box} 
-                    style={{backgroundColor: e, height: "3rem", width: "3rem", margin: "1rem"}}
-                     ></div>)}
+                    {arr.map( (color) => 
+                    <div className={color} key={color} style={{backgroundColor: color, height: "3rem", width: "3rem", margin: "1rem"}}></div>)}
                 </form>
 
             </div>

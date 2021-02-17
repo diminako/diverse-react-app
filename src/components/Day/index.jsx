@@ -25,11 +25,11 @@ const style = {
 const Day = ({day}) => {
     return (
         <div style={style.day}>
-            {(day === " " && <Day000 />) ||
+            {(day === "Day000" && <Day000 />) ||
             (day === "Day001" && <Day001 />) ||
             (day === "Day002" && <Day002 />) ||
-            (day === "Day003" && <Day003 />) 
-            // (day === "Day010" && <Day010 />)
+            (day === "Day003" && <Day003 />) || 
+            (day === "Day010" && <Day010 />)
             
       
       }
