@@ -1,6 +1,8 @@
+import Day000 from "../../pages/Day000";
 import Day001 from "../../pages/Day001";
 import Day002 from "../../pages/Day002";
 import Day003 from "../../pages/Day003";
+import Day010 from "../../pages/Day010";
 
 
 
@@ -14,16 +16,21 @@ import Day003 from "../../pages/Day003";
 
 const style = {
     day: {
-        height: "78%"
+        height: "78%",
+        borderLeft: "1px solid black",
+        borderRight: "1px solid black"
     }
 }
 
 const Day = ({day}) => {
     return (
         <div style={style.day}>
-            {(day === "Day001" && <Day001 />) ||
+            {(day === " " && <Day000 />) ||
+            (day === "Day001" && <Day001 />) ||
             (day === "Day002" && <Day002 />) ||
-            (day === "Day003" && <Day003 />)
+            (day === "Day003" && <Day003 />) 
+            // (day === "Day010" && <Day010 />)
+            
       
       }
         </div>

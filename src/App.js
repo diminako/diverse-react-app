@@ -9,7 +9,7 @@ import './App.css';
 const style = {
   page: {
     backgroundColor: "darkGrey",
-    padding: "0 18rem",
+    padding: "0 5%",
     fontSize: "62.5%",
     height: "100vh",
     display: "flex",
@@ -18,7 +18,7 @@ const style = {
 }
 
 const App = () => {
-const [day, setDay] = useState("");
+const [day, setDay] = useState(" ");
 
   const daySelection = (e) => {
     e.preventDefault();

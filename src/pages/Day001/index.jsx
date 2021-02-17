@@ -1,9 +1,23 @@
+const style = {
+    item: {
+        height: "3rem",
+        width: "3rem",
+        backgroundColor: "blue"
+    }
+}
+
+
 
 const Day001 = () => {
     return (
 
         <div>
-            <p>Day 1 :)</p>
+            
+            <div className="item" style={style.item} draggable="true"></div>
+
+
+
+
         </div>
     )
 }
