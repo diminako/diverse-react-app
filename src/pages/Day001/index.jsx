@@ -12,27 +12,25 @@ const style = {
         marginTop: "8rem",
         display: "flex",
         justifyContent: "center"
+
     },
     blue: {
-        height: "3rem",
-        width: "3rem",
         backgroundColor: "blue"
     },
     red: {
-        height: "3rem",
-        width: "3rem",
         backgroundColor: "red"
     },
     yellow: {
-        height: "3rem",
-        width: "3rem",
         backgroundColor: "yellow"
     },
     green: {
-        height: "3rem",
-        width: "3rem",
         backgroundColor: "green"
     },
+    box: {
+        height: "3rem",
+        width: "3rem",
+        margin: "1rem"
+    }
 }
 
 let arr = ["blue", "red", "yellow", "green"];
@@ -46,34 +44,28 @@ let winningChoice = arr[getRandomInt()]
 const clickBox = (e) => {
     e.preventDefault();
 
-    if(e.target.className == winningChoice) {
+    if(e.target.className === winningChoice) {
         alert("Congrats You were right!")
     } else {
         alert("Nope!  Try again!")
     }
-    
+
     winningChoice = arr[getRandomInt()]
 }
 
 const Day001 = () => {
     return (
-
         <div>
             <div className="header" style={style.header}>Guess the correct Box!</div>
-
             <div className="container" style={style.container}>
 
-
                 <form action="" style={style.container} onClick={(e) => clickBox(e)}>
-                    <div className="blue" style={style.blue}></div>
-                    <div className="red" style={style.red}></div>
-                    <div className="yellow" style={style.yellow}></div>
-                    <div className="green" style={style.green}></div>
+                    {arr.map( (e) => <div className={e} style={style.box} 
+                    style={{backgroundColor: e, height: "3rem", width: "3rem", margin: "1rem"}}
+                     ></div>)}
                 </form>
 
             </div>
-
-
         </div>
     )
 }
