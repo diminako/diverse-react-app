@@ -39,7 +39,7 @@ const Day001 = () => {
 
     return (
         <div>
-            <h1 style={{fontSize: "2rem", marginBottom: "2rem"}}>Decypher each see what happens!</h1>
+            <h1 style={{fontSize: "2rem", marginBottom: "2rem"}}>Decipher each see what happens!</h1>
             <ul className="container" style={style.container}>
                 <li className="first" style={style.li}>{first}</li>
                 {/* Video Games */}
