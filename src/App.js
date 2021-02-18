@@ -24,7 +24,6 @@ const [day, setDay] = useState("Day000");
     e.preventDefault();
 
     setDay(e.target[0].value);
-    console.log(day)
   }
 
   const returnHome = (e) => {

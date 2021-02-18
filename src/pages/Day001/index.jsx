@@ -36,7 +36,7 @@ const style = {
 let arr = ["blue", "red", "yellow", "green"];
 
 function getRandomInt() {
-    return Math.floor(Math.random() * Math.floor(3));
+    return Math.floor(Math.random() * Math.floor(4));
   }
 
 let winningChoice = arr[getRandomInt()]

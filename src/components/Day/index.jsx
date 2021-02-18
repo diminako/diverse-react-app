@@ -7,13 +7,6 @@ import Day010 from "../../pages/Day010";
 
 
 
-
-
-
-
-
-
-
 const style = {
     day: {
         height: "78%",
