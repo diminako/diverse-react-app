@@ -1,10 +1,10 @@
-import React from "react"
+import React, {useState} from "react"
 
 const style = {
     button: {
         marginTop: "3rem",
         height: "3rem",
-        width: "5rem",
+        width: "10rem",
         border: "3px solid black",
         display: "flex",
         justifyContent: "center",
@@ -17,37 +17,50 @@ const style = {
         flexDirection: "column",
         JustifyContent: "center",
         alignItems: "center"
-    }
+    },
+    _0: [{
+        marginTop: "2rem", 
+        fontSize: "3rem",
+        backgroundColor: "orangered"
+    },
+    {
+        marginTop: "5rem", 
+        fontSize: "2rem",
+        backgroundColor: "blue"
+    },
+    {
+        marginTop: "5rem", 
+        fontSize: "5rem",
+        backgroundColor: "green"
+    }]
 }
 
-const textArr = ["You Got This!", "Don't give up!", "Keep Learning!", "React is FUN!", ""]
-
-
-const createNum = () => Math.floor(Math.random(1) * 11)
-
-const createNewDiv = (e) => {
-    let num = createNum();
-    let parent = e.target.parentNode;
-    let newDiv = <div>Hello!!!</div>
-
-    parent.append(newDiv)
-
-    console.log(parent)
-    // console.log(newDiv)
-    // mainDiv.append(newDiv)
-    // div.createElement()
-}
+const textArr = ["You Got This!", "Don't give up!", "Keep Learning!", "React is FUN!", "JSX is neat!", "Keep it up!", "Stay Motivated!"];
+const createNum = (x) => Math.floor(Math.random() * x);
 
 const Day003 = () => {
-    return (
+    const [text, setText] = useState("");
 
+    const selectItem = () => {
+        const num = createNum(textArr.length);
+        setText(textArr[num])
+    }
+    
+    const renderText = () => {
+        const num = createNum(style._0.length);
+        return (
+            <h2 style={style._0[num]}>{text}</h2>
+        )
+    }
+
+    return (
         <div style={style.mainDiv}>
             <button
-                onClick={(e) => createNewDiv(e)}
+                onClick={(e) => selectItem(e)}
                 style={style.button}>
-                Click Me!
+                Keep Clicking Me!
              </button>
-
+            {renderText()}
         </div>
     )
 }
