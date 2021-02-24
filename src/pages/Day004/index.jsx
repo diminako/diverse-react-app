@@ -1,4 +1,14 @@
 import { useState } from "react";
+import pic0 from "./pic0.jpg";
+import pic1 from "./pic1.jpg";
+import pic2 from "./pic2.jpg";
+import pic3 from "./pic3.jpg";
+import pic4 from "./pic4.jpg";
+import pic5 from "./pic5.jpg";
+import pic6 from "./pic6.jpg";
+import pic7 from "./pic7.jpg";
+import pic8 from "./pic8.jpg";
+import pic9 from "./pic9.jpg";
 
 const style = {
     upperSect: {
@@ -10,19 +20,23 @@ const style = {
 
 }
 
+const picArr = [pic0,
+    pic1,
+    pic2,
+    pic3,
+    pic4,
+    pic5,
+    pic6,
+    pic7,
+    pic8,
+    pic9]
+    
 const Day004 = () => {
-    const [mainPic, setMainPic] = useState("./pic-0.jpg")
+    const [mainPic, setMainPic] = useState(pic0)
 
-    const picArr = ["./pic-0.jpg",
-        "./pic-1.jpg",
-        "./pic-2.jpg",
-        "./pic-3.jpg",
-        "./pic-4.jpg",
-        "./pic-5.jpg",
-        "./pic-6.jpg",
-        "./pic-7.jpg",
-        "./pic-8.jpg",
-        "./pic-9.jpg"]
+    const setPicture = (e) => {
+        console.log(e.target.value)
+    }
 
     return (
         <div>
@@ -30,11 +44,18 @@ const Day004 = () => {
                 <h2>I took a break on day 4 to help a friend. :)</h2>
                 <div className="img-container">
 
-                    <img src={picArr[0]} alt="" height="100%" />
+                    <img src={mainPic} alt="" height="350px" />
                 </div>
             </section>
-            <section className="lower-sect" style={style.lowerSect}>
 
+            <section className="lower-sect" style={style.lowerSect}>
+                <div className="pic-arr-container" height="200px">
+                    {picArr.map((pic) => 
+                    <img src={pic} alt="" 
+                    onClick={(e) => setPicture(e)}
+                    value={pic}
+                    height="100px" /> )}
+                </div>
             </section>
 
         </div>
