@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import pic0 from "./pic0.jpg";
 import pic1 from "./pic1.jpg";
 import pic2 from "./pic2.jpg";
@@ -15,7 +16,13 @@ const style = {
 
     },
     lowerSect: {
-
+        padding: "30px",
+        display: "flex",
+        flexWrap: "flex-wrap"
+    },
+    images: {
+        padding: "10px",
+        flexDirection: "row"
     }
 
 }
@@ -32,10 +39,11 @@ const picArr = [pic0,
     pic9]
     
 const Day004 = () => {
-    const [mainPic, setMainPic] = useState(pic0)
+    const [mainPic, setMainPic] = useState(pic2)
 
+    
     const setPicture = (e) => {
-        console.log(e.target.value)
+        setMainPic(e.target.src)
     }
 
     return (
@@ -50,10 +58,11 @@ const Day004 = () => {
 
             <section className="lower-sect" style={style.lowerSect}>
                 <div className="pic-arr-container" height="200px">
-                    {picArr.map((pic) => 
-                    <img src={pic} alt="" 
+                    {picArr.map((pic, i) => 
+                    <img style={style.images}
+                    src={pic} alt="" 
                     onClick={(e) => setPicture(e)}
-                    value={pic}
+                    select={`pic${i}`}
                     height="100px" /> )}
                 </div>
             </section>
