@@ -4,6 +4,7 @@ import Day002 from "../../pages/Day002";
 import Day003 from "../../pages/Day003";
 import Day004 from "../../pages/Day004";
 import Day005 from "../../pages/Day005";
+import Day006 from "../../pages/Day006";
 import Day010 from "../../pages/Day010";
 
 
@@ -26,6 +27,7 @@ const Day = ({day}) => {
             (day === "Day003" && <Day003 />) || 
             (day === "Day004" && <Day004 />) || 
             (day === "Day005" && <Day005 />) || 
+            (day === "Day006" && <Day006 />) || 
             (day === "Day010" && <Day010 />)
             
       
