@@ -48,6 +48,7 @@ const Day007 = () => {
             <div style={style.card}>
                 <img style={style.pic} src={dimitri} alt=""/>
                 <h2>Dimitri Nakos <span style={style.span}>35</span></h2>
+                <h3>Front end challenge :)</h3>
                 <h3 style={style.space}>Charlotte, NC</h3>
                 <ul style={style.cardUl}>
                     <li style={style.cardLi}>
