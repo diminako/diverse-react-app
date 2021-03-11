@@ -40,6 +40,7 @@ const Selection = ({ daySelection }) => {
                         <option value="Day004">Day - 4</option>
                         <option value="Day005">Day - 5</option>
                         <option value="Day006">Day - 6</option>
+                        <option value="Day007">Day - 7</option>
                         <option value="Day010">Day - 10</option>
                     </select>
                     <button>Go!</button>
