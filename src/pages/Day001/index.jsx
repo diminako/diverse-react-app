@@ -47,7 +47,7 @@ const clickBox = (e) => {
     if(e.target.className === winningChoice) {
         alert("Congrats You were right!")
     } else {
-        alert("Nope!  Try again!")
+        alert(`Nope!  Try again!  The correct color was ${winningChoice}.  Careful  it changes on the next attempt!`)
     }
 
     winningChoice = arr[getRandomInt()]
