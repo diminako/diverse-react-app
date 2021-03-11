@@ -1,6 +1,8 @@
+import dimitri from "./dimitri.png"
+
 const style = {
     background: {
-        backgroundColor: "aquamarine",
+        backgroundColor: "#cee6b4",
         display: "flex",
         justifyContent: "center",
         height: "100%",
@@ -12,30 +14,41 @@ const style = {
         height: "300px",
         width: "250px",
         position: "relative",
-        backgroundColor: "red"
-    },
-    pic: {
-
+        backgroundColor: "#9ecca4",
+        boxShadow: "5px 2px .2 black"
     },
     cardUl: {
         position: "absolute",
         listStyle: "none",
         display: "flex",
-        justifyContent: "between"
+        borderTop: "1px solid grey",
+        justifyContent: "space-evenly",
+        width: "100%"
     },
     cardLi: {
-        padding: "5px"
+        padding: "auto",
+        display: "flex",
+        flexDirection: "column"
+    },
+    span: {
+        color: "grey"
+    },
+    pic: {
+        height: "25%",
+        paddingTop: "75px",
+    },
+    space: {
+        paddingBottom: "50px"
     }
-
 }
 
 const Day007 = () => {
     return (
         <div style={style.background}>
             <div style={style.card}>
-                <img style={style.pic} src="" alt=""/>
-                <h2>Dimitri Nakos <span>35</span></h2>
-                <h3>Charlotte, NC</h3>
+                <img style={style.pic} src={dimitri} alt=""/>
+                <h2>Dimitri Nakos <span style={style.span}>35</span></h2>
+                <h3 style={style.space}>Charlotte, NC</h3>
                 <ul style={style.cardUl}>
                     <li style={style.cardLi}>
                         <h3>80k</h3>
